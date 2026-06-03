@@ -1,0 +1,28 @@
+# Secrets
+.env
+!.env.example
+
+# Database (committed so GitHub Actions can persist data)
+# data/trends.db  <- intentionally NOT ignored
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Logs
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Playwright
+.claude/
