@@ -5,20 +5,22 @@ on:
     - cron: "0 10 * * *"   # Every day at 10 AM UTC
   workflow_dispatch:        # Allow manual runs from Actions tab
 
+# Required so the Action can commit and push back to the repo
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   fetch-and-commit:
     runs-on: ubuntu-latest
 
-    # Required so the Action can commit and push back to the repo
-    permissions:
-      contents: write
-
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}   # enables git push from Actions
 
       - name: Set up Python
         uses: actions/setup-python@v5
