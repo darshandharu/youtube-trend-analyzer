@@ -1,5 +1,7 @@
 # 📺 YouTube Trend Analyzer
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://darshandharu-youtube-trend-analyzer.streamlit.app/)
+
 > An automated data pipeline that fetches **real-time YouTube trending videos** daily,
 > runs **NLP sentiment analysis** on titles, and surfaces insights through a live
 > **Streamlit dashboard** — with GitHub Actions keeping it updated automatically.
